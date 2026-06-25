@@ -1,0 +1,38 @@
+###
+GET http://localhost:8080/livres
+
+###
+POST http://localhost:8080/livres
+Content-Type: application/json
+
+{
+  "titre": "Clean Code",
+  "auteur": "Robert Martin",
+  "categorie": "Informatique",
+  "annee_publication": 2008,
+  "disponible": true
+}
+
+###
+GET http://localhost:8080/livres
+
+###
+GET http://localhost:8080/livres/1
+
+###
+PUT http://localhost:8080/livres/1
+Content-Type: application/json
+
+{
+  "titre": "Clean Architecture",
+  "auteur": "Robert Martin",
+  "categorie": "Informatique",
+  "annee_publication": 2017,
+  "disponible": true
+}
+
+###
+DELETE http://localhost:8080/livres/1
+
+###
+GET http://localhost:8080/livres
