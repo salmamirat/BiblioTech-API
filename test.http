@@ -1,0 +1,55 @@
+### GET tous les livres
+GET http://localhost:8080/livres
+
+###
+
+### GET livre par ID
+GET http://localhost:8080/livres/1
+
+###
+
+### POST
+POST http://localhost:8080/livres
+Content-Type: application/json
+
+{
+  "titre": "Clean Code",
+  "auteur": "Robert Martin",
+  "categorie": "Informatique",
+  "annee_publication": 2008,
+  "disponible": true
+}
+
+###
+
+### PUT
+PUT http://localhost:8080/livres/1
+Content-Type: application/json
+
+{
+  "titre": "Clean Code Updated",
+  "auteur": "Robert Martin",
+  "categorie": "Informatique",
+  "annee_publication": 2026,
+  "disponible": false
+}
+
+###
+
+### DELETE
+DELETE http://localhost:8080/livres/1
+
+###
+
+### SEARCH
+GET http://localhost:8080/livres/search?categorie=Informatique
+
+###
+
+### DISPONIBLE
+GET http://localhost:8080/livres?disponible=true
+
+###
+
+### STATS
+GET http://localhost:8080/stats/total
